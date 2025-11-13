@@ -7,13 +7,13 @@ int main (){
 	printf ("Menu: \n");
 	printf ("1, In ra chuoi da nhap thanh in hoa.\n");
 	printf ("2, In ra chuoi da nhap la in thuong.\n");
-	do {
-		printf("Nhap vao mot chuoi: ");
+	printf("Nhap vao mot chuoi: ");
     fgets(arr, 100, stdin);
     arr[strcspn(arr, "\n")] = '\0';
     int len = strlen(arr);
     printf ("Nhap lua chon cua ban: ");
     scanf ("%d", &choice);
+	do {
     switch (choice){
     	case 1:
     		for (i = 0; i < len; i++) {
@@ -29,7 +29,9 @@ int main (){
         		}
 			}
 			break;
-}
+	}
+	printf ("%s", arr);
+		break;
 } while (choice !=2);
 return 0;
 }
